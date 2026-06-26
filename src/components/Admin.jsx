@@ -5,6 +5,7 @@ import styles from './Admin.module.css'
 
 const CATEGORIES = ['general','technology','war','politics','sports','culture']
 const DIFFICULTIES = ['easy','medium','hard']
+const ADMIN_EMAIL = 'umbhatt18@gmail.com'
 
 export default function Admin() {
   const { user } = useAuth()
@@ -89,7 +90,7 @@ export default function Admin() {
     fetchAll()
   }
 
-  if (!user) return (
+  if (!user || user.email !== ADMIN_EMAIL) return (
     <div className={styles.gate}>
       <p>Sign in to access the admin panel.</p>
     </div>
