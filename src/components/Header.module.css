@@ -2,72 +2,104 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #2a2a2a;
-  background: #0f0f0f;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  height: 50px;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--border);
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logoIcon { font-size: 1.4rem; }
-
-.logoText {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #f5c842;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
 }
 
-.auth {}
-
-.signInBtn {
-  background: #f5c842;
-  color: #0f0f0f;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.15s;
-}
-
-.signInBtn:hover { opacity: 0.85; }
-
-.userArea {
+.controls {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
+.themeBtn {
+  background: none;
+  border: none;
+  color: var(--text2);
+  font-size: 1.1rem;
+  padding: 4px;
+  border-radius: var(--radius);
+  transition: color 0.15s;
+  line-height: 1;
 }
 
-.userName {
-  font-size: 0.875rem;
-  color: #ccc;
+.themeBtn:hover { color: var(--text); }
+
+.signInBtn {
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.15s;
+}
+
+.signInBtn:hover { opacity: 0.8; }
+
+.userArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
 }
 
 .signOutBtn {
-  background: transparent;
-  border: 1px solid #333;
-  border-radius: 6px;
-  color: #888;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: border-color 0.15s;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text2);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.75rem;
+  transition: border-color 0.15s, color 0.15s;
 }
 
-.signOutBtn:hover { border-color: #555; color: #ccc; }
+.signOutBtn:hover { border-color: var(--text2); color: var(--text); }
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.adminLink {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text2);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+.adminLink:hover, .adminActive { color: var(--text); }
