@@ -303,3 +303,59 @@
 .good     { color: #b59f3b; }
 .okay     { color: #c0732a; }
 .miss     { color: #e74c3c; }
+
+/* Mode tabs */
+.modeTabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+.modeTab {
+  flex: 1;
+  padding: 0.6rem;
+  background: none;
+  border: none;
+  color: var(--text3);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.modeTab:hover { color: var(--text2); }
+
+.modeActive {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+/* Action row */
+.actionRow {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.nextBtn {
+  flex: 1;
+  padding: 1rem;
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.nextBtn:hover { border-color: var(--text2); }
+
+.shareBtn { flex: 1; }

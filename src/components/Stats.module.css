@@ -1,0 +1,243 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.modalTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--text2);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  transition: color 0.15s;
+}
+.closeBtn:hover { color: var(--text); }
+
+/* Streak */
+.streakRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.streakBox {
+  flex: 1;
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.streakNum {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.streakLabel {
+  font-size: 0.72rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.statBox {
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.statNum {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+/* Distribution */
+.distSection {
+  margin-bottom: 1.25rem;
+}
+
+.distTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text3);
+  margin-bottom: 0.6rem;
+}
+
+.distRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.distLabel {
+  font-size: 0.72rem;
+  color: var(--text2);
+  font-weight: 700;
+  width: 70px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.distBar {
+  flex: 1;
+  height: 18px;
+  background: var(--surface2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.distFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+  min-width: 2px;
+}
+
+.distCount {
+  font-size: 0.72rem;
+  color: var(--text2);
+  font-weight: 700;
+  width: 20px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* History */
+.histSection { }
+
+.histList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.histRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+
+.histDate {
+  color: var(--text3);
+  font-weight: 700;
+  width: 45px;
+  flex-shrink: 0;
+  font-size: 0.72rem;
+}
+
+.histTitle {
+  flex: 1;
+  color: var(--text2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.histYear {
+  color: var(--text3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.histScore {
+  font-weight: 800;
+  font-size: 0.875rem;
+  width: 38px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border);
+  border-top-color: var(--text);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.empty {
+  text-align: center;
+  color: var(--text3);
+  font-size: 0.875rem;
+  padding: 2rem 0;
+}
